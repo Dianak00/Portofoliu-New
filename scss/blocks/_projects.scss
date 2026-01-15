@@ -1,0 +1,132 @@
+.projects {
+  padding-top: 80px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #fff;
+
+  //   @include vp-1023 {
+  //     padding-top: 30px;
+  //   }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    @include vp-1023 {
+      gap: 30px;
+    }
+  }
+
+  &__box {
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgb(244, 42, 139);
+
+    @include vp-1023 {
+      max-width: 250px;
+    }
+
+    @include vp-767 {
+      min-width: 100px;
+    }
+
+    &-img {
+      height: 100%;
+      object-fit: fill;
+      border-radius: 20px;
+      display: block;
+
+      & img {
+        width: auto;
+        object-fit: fill;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      // flex-grow: 1;
+      padding: 20px 5px;
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      margin: 10px 0 0;
+      font-size: 30px;
+      color: #fff;
+
+      @include vp-1023 {
+        font-size: 25px;
+      }
+
+      @include vp-767 {
+        font-size: 20px;
+      }
+    }
+
+    &-technologies {
+      color: #fff;
+      margin: 0;
+      font-size: 22px;
+
+      @include vp-1023 {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      @include vp-767 {
+        font-size: 18px;
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: auto;
+
+      @include vp-1023 {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      @include vp-767 {
+        gap: 10px;
+      }
+    }
+
+    &-button {
+      width: 150px;
+      font-size: 20px;
+      border-radius: 20px;
+      padding: 10px 12px;
+      cursor: pointer;
+      border: none;
+      text-align: center;
+
+      @include vp-1023 {
+        width: 120px;
+        font-size: 17px;
+        padding: 9px 14px;
+      }
+
+      @include vp-767 {
+        // width: 100px;
+        font-size: 15px;
+        padding: 7px 12px;
+      }
+    }
+  }
+}

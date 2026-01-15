@@ -1,0 +1,46 @@
+.custom-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &__field {
+    border: 2px solid #efefef;
+    border-radius: 8px;
+    padding: 16px 40px 16px 20px;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #fff;
+
+    @include vp-1023 {
+      padding: 10px 25px 10px 15px;
+    }
+
+    @include vp-767 {
+      padding: 8px 20px 8px 10px;
+      width: 100%;
+    }
+    &::placeholder {
+      font-size: 14px;
+
+      @include vp-1023 {
+        font-size: 14px;
+      }
+
+      @include vp-767 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__label {
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    background-color: #111723;
+    padding: 0 7px;
+    font-size: 14px;
+  }
+}
